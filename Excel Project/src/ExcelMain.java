@@ -1,6 +1,7 @@
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.PrintStream;
 import java.util.Scanner;
 public class ExcelMain {
 	static Scanner scan = new Scanner(System.in);
@@ -12,10 +13,9 @@ public class ExcelMain {
 	a = scan.nextInt();
 	System.out.println("How many Columns do you want?");
 	b = scan.nextInt();
-	
+	Spreadsheet x = new Spreadsheet(a , b);
 	String input = scan.nextLine();
 	while (!input.equalsIgnoreCase("quit")) {
-		Spreadsheet x = new Spreadsheet(a , b);
 		x.constructspreadsheet(a , b);
 		System.out.println("Input?");
 		input = scan.nextLine();
@@ -28,7 +28,7 @@ public class ExcelMain {
 				//sorta();
 				break;
 			case "save":
-				//save();
+				Spreadsheet.save();
 				break;
 			case "load":
 				load();
@@ -81,6 +81,15 @@ public class ExcelMain {
 		return info;
 	}
 }
+
+
+
+
+
+
+			
+
+	
 	
 
 

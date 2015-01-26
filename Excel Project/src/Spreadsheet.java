@@ -1,3 +1,6 @@
+import java.io.File;
+import java.io.PrintStream;
+
 
 public class Spreadsheet {
 	// alphaidents are the columns (alphaidents = alphabetical identifiers)
@@ -22,7 +25,29 @@ public class Spreadsheet {
 	public int GetCharacterNumeric(char column) {
 		return (Character.getNumericValue(Character.toUpperCase(column))) - Character.getNumericValue('A');
 		
-	}	public void constructspreadsheet(int numericidents , int alphaidents) {
+	}
+	public static void Save( String[] array) {
+		
+		File f = new File(array[1]);
+		PrintStream output = null;
+		try {
+			output = new PrintStream(f);
+			output.
+			for (int i = 0; i < array.length; i++) {
+				for (int j = 0; j < array[i].length(); j++) {
+				
+		} catch (FileNotFoundException e) {
+			System.out.println("Could not save.");
+			return;
+		}
+}
+
+	
+	
+	
+	
+}
+	public void constructspreadsheet(int numericidents , int alphaidents) {
 			for (int i = 0; i <= this.numericidents; i++){
 				if (i == 0) {
 					System.out.print("|");
@@ -85,6 +110,8 @@ public class Spreadsheet {
 			System.out.print("-");
 		}
 		System.out.println();
-	}
-}
+	}	
+	
 
+}
+			
