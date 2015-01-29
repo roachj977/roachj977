@@ -7,8 +7,8 @@ public class Overload {
 
 		System.out.println("Integer mean: " + Mean(integerValues));
 		System.out.println("Double mean: " + Mean(doubleValues));
-		// System.out.println("Integer median: " + Median(integerValues));
-		// System.out.println("Double median: " + Median(doubleValues));
+		System.out.println("Integer median: " + Median(integerValues));
+		System.out.println("Double median: " + Median(doubleValues));
 		// System.out.println("Integer mode: " + Mode(integerValues));
 		// System.out.println("Double mode: " + Mode(doubleValues));
 	}
@@ -104,10 +104,18 @@ public class Overload {
 		double mean =  sum / copy.length;
 		
 		return mean;
+	} 
+	public static int Median(int[] values) {
+		int pointer = values.length / 2;
+		
+		int median = values[pointer];
+		return median;
+	}
+	public static double Median(double[] values) {
+		int pointer = values.length / 2;
+		double median = values[pointer];
+		return median;
 	}
 	
-	// TODO: overload mean so it works with an array of doubles
-	
-	// TODO: overload median and mode so that it works with an array of doubles
 }
 
