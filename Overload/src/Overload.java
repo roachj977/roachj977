@@ -112,9 +112,17 @@ public class Overload {
 		return median;
 	}
 	public static double Median(double[] values) {
-		int pointer = values.length / 2;
-		double median = values[pointer];
-		return median;
+		double[] copy = Copy(values);
+		Sort(copy);
+		double median = 0;
+		if (copy.length % 2 == 0){
+			median = (copy[(copy.length / 2) -1] + copy[(copy.length / 2) + 1]) / 2; 
+		} else {
+			median = copy[(copy.length / 2) + 1];
+		}
+		
+		
+		return median ;
 	}
 	
 }
