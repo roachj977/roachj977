@@ -5,30 +5,41 @@ import java.io.PrintStream;
 import java.util.Scanner;
 public class ExcelMain {
 	static Scanner scan = new Scanner(System.in);
-	public static int a;
-	public static int b; 
+	public static int alpha;
+	public static int numeric; 
+	public static char c;
+	public static int r;
+	public static String info;
 	public static void main(String[] args) {	
 	System.out.println("Welcome to John Roach's Excel Program!");
 	System.out.println("How many Rows do you want?");
-	a = scan.nextInt();
+	numeric = scan.nextInt();
 	System.out.println("How many Columns do you want?");
-	b = scan.nextInt();
-	Spreadsheet x = new Spreadsheet(a , b);
+	alpha = scan.nextInt();
+	Spreadsheet x = new Spreadsheet(alpha , numeric);
 	String input = scan.nextLine();
 	while (!input.equalsIgnoreCase("quit")) {
-		x.constructspreadsheet(a , b);
+		x.constructspreadsheet(alpha , numeric);
 		System.out.println("Input?");
 		input = scan.nextLine();
 		String[] array = input.split(" ");
 		switch (array[0]) {
 			case "Clear":
-				//clear();
+				x.Clear();
+				break;
+			case "Clearcell":
+				String s = array[1].toString();
+				
+				c = input.charAt(s.indexOf(' ' + 1));
+				r = Integer.parseInt(input.substring(c + 1, c + 2));
+				info = input.substring(c+2);
+				x.Clearcell(c,r,info);
 				break;
 			case "sorta":
 				//sorta();
 				break;
 			case "save":
-				Spreadsheet.save();
+				//x.save(numeric , alpha , x , array);
 				break;
 			case "load":
 				load();
@@ -43,14 +54,14 @@ public class ExcelMain {
 				//b = Integer.parseInt(input.substring(input.indexOf('=') + 1));
 				//break;
 			default :
-				char c = parsec(input);
-				int r = parser(input);
-				String info =parseinfo(input);
+				c = parsec(input);
+				r = parser(input);
+				info =parseinfo(input);
 				x.Setcells(c, r, info);
 				break;
 		}
 		}
-	//scan.close();
+	scan.close();
 	}
 	private static void load() {
 		System.out.println("Which file do you want to access?");
