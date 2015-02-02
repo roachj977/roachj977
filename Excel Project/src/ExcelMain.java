@@ -28,18 +28,17 @@ public class ExcelMain {
 				x.Clear();
 				break;
 			case "Clearcell":
-				String s = array[1].toString();
-				
-				c = input.charAt(s.indexOf(' ' + 1));
-				r = Integer.parseInt(input.substring(c + 1, c + 2));
-				info = input.substring(c+2);
+				int parse = input.indexOf(' ');
+				c = input.charAt(parse + 1);
+				r = Integer.parseInt(input.substring(parse + 2, parse + 3));
+				info = input.substring(parse + 3);
 				x.Clearcell(c,r,info);
 				break;
 			case "sorta":
 				//sorta();
 				break;
 			case "save":
-				//x.save(numeric , alpha , x , array);
+				x.save(numeric , alpha , x , array);
 				break;
 			case "load":
 				load();

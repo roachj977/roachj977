@@ -101,19 +101,21 @@ public class Spreadsheet {
 						}
 					} else if (i > 0) { // Print the cell values
 						if (j < this.columns - 1) {
-							// System.out.println(">>> j = " + j + ", i = " + i);
+							
 							if (this.spreadsheet[i -1][j] !=null) {
 								System.out.printf("%" + cellwidth + "s" , this.spreadsheet[i - 1][j].toString(cellwidth));
 								System.out.print("|");
+								
 							} else  {
 								System.out.printf("%" + cellwidth + "s" , " ");
 								System.out.print("|");
-						
+								
 							}
 						} else if (j == this.columns -1) {
 							if (this.spreadsheet[i - 1][j] != null) {
 								System.out.printf("%" + cellwidth + "s", this.spreadsheet[i - 1  ][j].toString(cellwidth));
 								System.out.println("|");
+								dashes();
 							} else {
 								System.out.printf("%" + cellwidth + "s" , " ");
 								System.out.println("|");
@@ -131,7 +133,7 @@ public class Spreadsheet {
 		}
 		System.out.println();
 	}
-	public static void save(int rows, int columns, Cell[][] spreadsheet, String[] array) {
+	public static void save(String[] array) {
 			// set up output file
 			File f = new File(array[1]);
 			PrintStream output;
@@ -145,7 +147,8 @@ public class Spreadsheet {
 			// write values for all variables
 			for (int i = 0; i < rows; i++) {
 				for (int j = 0; j < columns; j++)
-					if (spreadsheet[i][j] != null) {
+					if (x[i][j] != null) {
+						output.println(x[i][j]);
 						//char c = 
 					}
 			}
