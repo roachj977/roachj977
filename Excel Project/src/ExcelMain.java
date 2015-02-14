@@ -1,7 +1,4 @@
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintStream;
 import java.util.Scanner;
 public class ExcelMain {
 	static Scanner scan = new Scanner(System.in);
@@ -34,17 +31,25 @@ public class ExcelMain {
 				info = input.substring(parse + 3);
 				x.Clearcell(c,r,info);
 				break;
-			case "sorta":
-				//sorta();
+			/*case "sorta":
+				if (array[1].length() == 1) {
+				x.sortarow();
+				} else {
+					x.sortarectangle();
+				}
 				break;
-			case "save":
-				x.save(numeric , alpha , x , array);
+			*/case "save":
+				Saveload.save(array);
 				break;
 			case "load":
-				load();
+				Saveload.load(array);
 				break;
-			case "sortd":
-				//sortd();
+			/*case "sortd":
+				if (array[1].length() == 1) {
+				x.sortdrow();
+				} else {
+					x.sortdrectangle();
+				}
 				break;
 			// case "rows":
 				// a = Integer.parseInt(input.substring(input.indexOf('=') + 1));
@@ -52,7 +57,7 @@ public class ExcelMain {
 			//case "columns":
 				//b = Integer.parseInt(input.substring(input.indexOf('=') + 1));
 				//break;
-			default :
+			*/default :
 				c = parsec(input);
 				r = parser(input);
 				info =parseinfo(input);
@@ -62,24 +67,7 @@ public class ExcelMain {
 		}
 	scan.close();
 	}
-	private static void load() {
-		System.out.println("Which file do you want to access?");
-		String s = scan.nextLine();
-		File f = new File(s);
-		Scanner input;
-		try {
-			input = new Scanner(f);
-		}catch (FileNotFoundException e) {
-			System.out.println("Could not load file.");
-			return;
-		} 
-		while (input.hasNext()) {
-			String cmd = input.nextLine();
-			System.out.println(cmd);
-		} 
-		input.close();
-		
-	}
+	
 	public static char parsec (String s) {
 		char c = s.charAt(0);
 		return c;		
