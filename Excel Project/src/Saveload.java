@@ -30,13 +30,11 @@ public class Saveload {
 			
 		}
 
-
 		// close file
 	
 	}
 	
 	public static void load(String[] array) {
-		System.out.println("Which file do you want to access?");
 		File f = new File(array[1]);
 		Scanner input = null;
 		try { 
@@ -49,14 +47,16 @@ public class Saveload {
 		String sizes = input.nextLine();
 		ExcelMain.numeric = Integer.parseInt(sizes.substring(0 , 1));
 		ExcelMain.alpha = Integer.parseInt(sizes.substring(2));
-		System.out.println(ExcelMain.numeric);
-		System.out.println(ExcelMain.alpha);
+		@SuppressWarnings("unused")
+		Spreadsheet sheet = new Spreadsheet(ExcelMain.alpha , ExcelMain.numeric);
 		while (input.hasNext()) {
 			String line = input.nextLine();
-			Spreadsheet.rows = Integer.parseInt(line.substring(0 , 1));
-			Spreadsheet.columns = Integer.parseInt(line.substring(2, 3));
-			Spreadsheet.spreadsheet[Spreadsheet.rows][Spreadsheet.columns].Setcells(line.substring(4));
+			int r = Integer.parseInt(line.substring(0 , 1));
+			int c = Integer.parseInt(line.substring(2, 3));
+			Spreadsheet.Setcells(c , r , line.substring(4));
+			
 		}
+	
 		input.close();
 		}
 	}
