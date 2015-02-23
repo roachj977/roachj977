@@ -1,0 +1,57 @@
+Chapter One Exercises
+Exercise Set 1:
+1. Complete (yes/no)? YES
+2. No
+
+Analysis Question Set 1:
+1. The body of water is represented by a blue grid with black lines.  The grid lines represent a location that one of the fish can appear in.
+2. The fish can be in any of the gridded squares but they cannot be on top of each other.
+3. All of the fish do not face the same direction. The fish's direction matters only that it won't travel backwards.
+4. Every fish moves in every step.  They all move one step each time.  They don't always move in the same direction.  
+The fish won't travel backwards and most of observed movement was random.
+
+Exercise Set 2:
+1.	Timestep	Fish's location		Fish's Direction	Did it move?	In what direction?	New location	New direction
+	1				3x2					North				Yes					West			4x2				West
+	2				3x1					West				Yes					West			4x1				West
+	3				3x0					West				Yes					North			3x1				North
+	4				2x0					North				Yes					North			2x1				North
+	5				1x0					North				Yes					North			1x1				North
+	
+
+
+2.  The fish moves forward 3 times and moves left 2 times.  When I compared my data with a partner, I noticed that our fish both started at 
+the same point but they did not follow the same paths.
+
+Analysis Question Set 2:
+1. The data that I took from the tests was different from my other classmates but 5 trials of data is not enough to make a conclusion.
+2.	Timestep	Fish's location		Fish's Direction	Did it move?	In what direction?	New location	New direction
+	1				3x2					North				Yes				East				3x3				East
+	2				3x3					East				Yes				North				2x3				North		
+	3				2x3					North				Yes				East				2x4				East
+	4				2x4					East				Yes				North				1x4				North			
+	5				1x4					North				Yes				West				1x3				West
+	6				1x3					West				Yes				North				0x3				North
+	7				0x3					North				Yes				West				0x2				West				
+	8				0x2					West				Yes				West				0x1				West													
+	9				0x1					West				Yes				South				1x1				South				
+	10				1x1					South				Yes				South				2x1				South										
+	11				2x1					South				Yes				East				2x2				East						
+	12				2x2					East				Yes				North				1x2				North						
+	13				1x2					North				Yes				West				1x1				West
+	14				1x1					West				Yes				South				2x1				South
+	15				2x1					South				Yes				South				3x1				South
+	16				3x1					South				Yes				West				3x0				West
+	17				3x0					West				Yes				North				2x0				North
+	18				2x0					North				Yes				East				3x1				East			
+	19				2x1					East				Yes				East				2x2				East
+	20				2x2					East				Yes				East				2x3				East
+
+Analysis Question Set 3:
+1.  The numbers began with 0 , 0 in the top left corner and the first number increases as it moves along the y axis.
+
+Exercise Set 3:
+1.No, the initial positions and directions are far different from what was observed in onefish.dat. This is due to there being more fish present.
+2.Yes because I was the one set the locations for both the amount of rows/columns and the positions of the fish.
+
+UOPLOAD THE DATA FILE THAT YOU MAKE FOR THE LAST PROBLEM TO YOUR GIT REPOSITORY.
