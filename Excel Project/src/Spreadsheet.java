@@ -21,13 +21,6 @@ public class Spreadsheet {
 			spreadsheet[r - 1][GetCharacterNumeric(c)].Setcells(info);
  		}
 	}
-	public static void Setcells (int c, int r, String info) {
-		if (spreadsheet[r][c] == null) {
-			spreadsheet[r][c] = new Cell(info);
-		} else {
-			spreadsheet[r][c].Setcells(info);
- 		}
-	}
 	public int GetCharacterNumeric(char column) {
 		return (Character.getNumericValue(Character.toUpperCase(column))) - Character.getNumericValue('A');
 		
