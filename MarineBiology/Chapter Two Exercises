@@ -1,0 +1,46 @@
+
+Marine Biology Case Study
+Chapter Two Exercises 
+
+Analysis Question Set 1:
+1. The step method is passed an array of locatable objects from the environment class.
+ Locatable is an interface defined in the simulation program. Any object stored in an environment must implement the Locatable interface.
+ The step class gets enough information from the locatable objects that are passed to it from the environment interface.
+2. 
+
+Analysis Question Set 2:
+1. You would probably expect loc2 , loc3 but not loc4  
+2. East
+3.Dir2 = South; Dir3 = North
+4. (6,3)
+5. (5,3)
+6. Direction Class- 
+Direction(int degrees)
+Direction(String str)
+int inDegrees()
+boolean equals(Object other)
+Direction toRight()
+Direction toRight(int degrees)
+Direction toLeft()
+Direction toLeft(int degrees)
+Direction reverse()
+String toString()
+static Direction randomDirection()
+
+Location Class-
+Location(int row, int col)
+int row()
+int col()
+boolean equals(Object other)
+int compareTo(Object other)
+String toString()
+
+You might use the toString method to print out the values of the direction.  
+This could be useful for debugging.
+
+The additional toRight and toLeft methods are overload methods that allow the
+ user to pass specific degree values for specific directions.
+
+Exercise Set 1:
+1. Done and all above answers agree with the program
+2.
