@@ -6,7 +6,8 @@ Analysis Question Set 1:
 1. The step method is passed an array of locatable objects from the environment class.
  Locatable is an interface defined in the simulation program. Any object stored in an environment must implement the Locatable interface.
  The step class gets enough information from the locatable objects that are passed to it from the environment interface.
-2. 
+2. SimpleMBSDemo2 is passed information from the Environment interface and runs each step through the simulation class.
+SimpleMBSDemo1 doesn't use the simulation class so it cannot be passed location information therefore it must be defined within the driver.
 
 Analysis Question Set 2:
 1. You would probably expect loc2 , loc3 but not loc4  
@@ -42,5 +43,5 @@ The additional toRight and toLeft methods are overload methods that allow the
  user to pass specific degree values for specific directions.
 
 Exercise Set 1:
-1. Done and all above answers agree with the program
-2.
+1. Done and all above answers agree with the program.
+2. dir3 in degrees is 0.
